@@ -11,7 +11,7 @@ export class SearchBoxComponent {
   public placeholder: string = '';
 
   @Output()
-  public onValue = new EventEmitter<String>();
+  public onValue = new EventEmitter<string>();
 
   emitValue(value: string): void {
     this.onValue.emit(value);
