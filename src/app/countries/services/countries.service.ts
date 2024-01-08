@@ -13,28 +13,26 @@ export class CountriesService {
   constructor(private httpClient: HttpClient) {
   }
 
-  searchCapital(term: string): Observable<Country[]> {
-    const url = `${this.apiUrl}/capital/${term}`;
+  private getCountriesRequest(url: string): Observable<Country[]> {
     return this.httpClient.get<Country[]>(url)
       .pipe(
         catchError(() => of([]))
       );
+  }
+
+  searchCapital(term: string): Observable<Country[]> {
+    const url = `${this.apiUrl}/capital/${term}`;
+    return this.getCountriesRequest(url);
   }
 
   searchCountry(term: string): Observable<Country[]> {
     const url = `${this.apiUrl}/name/${term}`;
-    return this.httpClient.get<Country[]>(url)
-      .pipe(
-        catchError(() => of([]))
-      );
+    return this.getCountriesRequest(url);
   }
 
   searchRegion(region: string): Observable<Country[]> {
     const url = `${this.apiUrl}/region/${region}`;
-    return this.httpClient.get<Country[]>(url)
-      .pipe(
-        catchError(() => of([]))
-      );
+    return this.getCountriesRequest(url);
   }
 
   searchCountryByAlphaCode(code: string): Observable<Country | null> {
