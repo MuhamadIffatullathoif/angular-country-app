@@ -3,14 +3,15 @@
 
 <div class="row">
   <div class="col">
-  <!-- Search Box -->
-    <shared-search-box (onValue)="searchByCapital($event)" [placeholder]="'Search by capital'"></shared-search-box>
+    <!-- Search Box -->
+    <shared-search-box (onValue)="searchByCapital($event)"
+                       [placeholder]="'Search by capital'"></shared-search-box>
   </div>
 </div>
 
 <div class="row">
   <div class="col">
-  <!-- Result Table -->
+    <!-- Result Table -->
     <hr>
     <ul>
       <li *ngFor="let country of countries">
