@@ -4,6 +4,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {RouterLink, RouterModule} from "@angular/router";
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 
 
@@ -11,12 +12,14 @@ import {RouterLink, RouterModule} from "@angular/router";
   declarations: [
     AboutPageComponent,
     HomePageComponent,
-    SidebarComponent
+    SidebarComponent,
+    ContactPageComponent
   ],
   exports: [
     AboutPageComponent,
     HomePageComponent,
-    SidebarComponent
+    SidebarComponent,
+    ContactPageComponent
   ],
   imports: [
     CommonModule,
