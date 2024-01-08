@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col">
   <!-- Search Box -->
-    <shared-search-box></shared-search-box>
+    <shared-search-box (onValue)="searchByCapital($event)" [placeholder]="'Search by capital'"></shared-search-box>
   </div>
 </div>
 
